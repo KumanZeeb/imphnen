@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 bg-size-400 animate-gradient text-white;
+}
+
+.glass-container {
+  @apply backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl shadow-2xl shadow-blue-900/50 p-8;
+}
+
+@keyframes gradient {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  animation: gradient 15s ease infinite;
+  background-size: 400% 400%;
+}
