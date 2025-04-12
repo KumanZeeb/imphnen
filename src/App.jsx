@@ -7,7 +7,8 @@ import FufuFafaQuotes from './components/FufuFafaQuotes';
 import FeaturesSection from './components/FeaturesSection';
 import JoinSection from './components/JoinSection';
 import MemeModal from './components/MemeModal';
-import Footer from './components/Footer'; // Import the new Footer component
+import Footer from './components/Footer';
+import TailwindToggle from './components/TailwindToggle'; // Import TailwindToggle
 
 function App() {
   const [email, setEmail] = useState('');
@@ -31,7 +32,8 @@ function App() {
         <JoinSection onSubmit={handleSubmit} email={email} setEmail={setEmail} />
       </main>
       <MemeModal isOpen={showMeme} onClose={() => setShowMeme(false)} />
-      <Footer /> {/* Added Footer component here */}
+      <Footer />
+      <TailwindToggle /> {/* Tambahkan TailwindToggle di sini */}
     </div>
   );
 }

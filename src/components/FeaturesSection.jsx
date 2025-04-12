@@ -46,11 +46,11 @@ const FeaturesSection = () => {
   ];
 
   const tips = [
-    "Kerja 25 menit, istirahat 2 jam (modifikasi Pomodoro)",
-    "Jika suatu task bisa selesai dalam 2 menit, delegasikan ke orang lain",
-    "Meeting harus lebih singkat dari durasi film Avengers",
-    "Banyakin commit message biar keliatan produktif",
-    "Kalau bisa di-Google, ngapain dihafal?"
+    "Kerja 25 menit, sekrol fesnuk 2 jam (modifikasi Pomodoro)",
+    "Jika suatu task bisa selesai dalam 2 menit, sekroll fesnuk lagi",
+    "mau commit git atau kerjain task, sekroll fesnuk dulu",
+    "Banyakin commit message biar keliatan produktif, infokan script penghijauan",
+    "Manfaatkan Ai, seperti portugis yang memanfaatkan kebodohan pribumi"
   ];
 
   return (

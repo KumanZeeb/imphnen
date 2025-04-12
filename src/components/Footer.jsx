@@ -1,6 +1,50 @@
 import { motion } from 'framer-motion';
 import { FaGithub, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
-import logo from '../assets/imphnen.png'; // Adjust path as needed
+import logo from '../assets/imphnen.png';
+import { useState, useEffect } from 'react';
+
+// Komponen TailwindToggle yang diintegrasikan langsung
+const TailwindToggle = () => {
+  const [tailwindEnabled, setTailwindEnabled] = useState(true);
+
+  useEffect(() => {
+    const styleTag = document.getElementById('tailwind-override');
+    
+    if (!tailwindEnabled) {
+      const style = document.createElement('style');
+      style.id = 'tailwind-override';
+      style.textContent = `
+        * {
+          all: revert !important;
+          font-family: system-ui, sans-serif !important;
+        }
+        footer *, #tailwind-toggle-btn {
+          all: unset !important;
+        }
+      `;
+      document.head.appendChild(style);
+    } else {
+      if (styleTag) {
+        styleTag.remove();
+      }
+    }
+  }, [tailwindEnabled]);
+
+  return (
+    <motion.button
+      id="tailwind-toggle-btn"
+      onClick={() => setTailwindEnabled(!tailwindEnabled)}
+      className="text-xs text-white/50 hover:text-blue-300 flex items-center gap-1"
+      whileHover={{ scale: 1.05 }}
+      title={tailwindEnabled ? 'Nonaktifkan Tailwind CSS' : 'Aktifkan Tailwind CSS'}
+    >
+      <span>CSS:</span>
+      <span className={`px-1 rounded ${tailwindEnabled ? 'text-green-300' : 'text-red-300'}`}>
+        {tailwindEnabled ? 'malas?' : 'disini baliknya wkwk'}
+      </span>
+    </motion.button>
+  );
+};
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -102,12 +146,13 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Copyright */}
+        {/* Copyright - TOMBOL DITAMBAH DI SINI */}
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-xs text-white/50">
             © {currentYear} IMPHNEN. All rights reserved.
           </p>
-          <div className="flex space-x-6 mt-4 md:mt-0">
+          <div className="flex items-center space-x-6 mt-4 md:mt-0">
+            <TailwindToggle />
             <a href="#" className="text-xs text-white/50 hover:text-blue-300">
               Privacy Policy
             </a>
