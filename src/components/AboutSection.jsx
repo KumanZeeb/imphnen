@@ -26,10 +26,10 @@ const AboutSection = () => {
       <div className="grid md:grid-cols-2 gap-6 sm:gap-10">
         <motion.div variants={item}>
           <p className="mb-4 sm:mb-6 leading-relaxed text-white/90">
-            Komunitas "Malas adalah Emas" didirikan pada tahun 2023 dengan tujuan mengubah paradigma tentang kemalasan.
+            Komunitas "IMPHNEN" Ingin Menjadi Programmer Handal Namun Enggan Ngoding adalah grup para sepuh yang merendah jirr.
           </p>
           <p className="leading-relaxed text-white/90">
-            Kami percaya bahwa kemalasan yang cerdas adalah sumber inovasi dan efisiensi.
+            Kami percaya bahwa sekroll fesnuk 8 jam sehari bisa memperlancar anu itunya apasih lupa, anunya di ituin .
           </p>
           <div className="mt-6 sm:mt-8 p-4 sm:p-5 bg-gradient-to-r from-yellow-500/10 to-amber-500/10 rounded-lg sm:rounded-xl border border-yellow-500/20">
             <p className="font-medium italic text-yellow-200">"Semakin malas seorang programmer, semakin baik kode yang dihasilkannya"</p>
